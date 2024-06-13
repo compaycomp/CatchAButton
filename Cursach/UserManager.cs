@@ -8,12 +8,15 @@ namespace Cursach
 {
     public static class UserManager
     {
-        private const string UsersFilePath = "C:\\Users\\CompayComp\\source\\repos\\Cursovaya\\Cursach\\Resources\\users.txt";
+        private const string UsersFileName = "users.txt";
+        
 
         public static void RegisterUser(string login, string password, int easyTime = 0, int mediumTime = 0, int hardTime = 0)
         {
             try
             {
+                string UsersFilePath = Path.Combine(Application.StartupPath, UsersFileName);
+
                 using (StreamWriter writer = new StreamWriter(UsersFilePath, true))
                 {
                     writer.WriteLine($"{login},{password},{easyTime},{mediumTime},{hardTime}");
@@ -29,6 +32,8 @@ namespace Cursach
         {
             try
             {
+                string UsersFilePath = Path.Combine(Application.StartupPath, UsersFileName);
+
                 string[] lines = File.ReadAllLines(UsersFilePath);
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -57,6 +62,8 @@ namespace Cursach
         {
             try
             {
+                string UsersFilePath = Path.Combine(Application.StartupPath, UsersFileName);
+
                 string[] lines = File.ReadAllLines(UsersFilePath);
                 int levelIndex = GetLevelIndex(level);
                 return lines.Select(line =>

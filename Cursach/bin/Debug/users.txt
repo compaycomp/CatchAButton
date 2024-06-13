@@ -1,1 +1,2 @@
-compaycomp,FffffffF
+ccc,cccccccc,2,3,4
+compaycomp,F1413324314F,3,2,4

@@ -11,7 +11,7 @@ namespace Cursach
     public partial class LoginForm : Form
     {
         private ErrorProvider errorProvider;
-        private const string UsersFilePath = "C:\\Users\\CompayComp\\source\\repos\\Cursovaya\\Cursach\\Resources\\users.txt"; // путь к файлу с пользователями
+        private const string UsersFilePath = "users.txt";
 
         public LoginForm()
         {
@@ -26,7 +26,6 @@ namespace Cursach
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
         }
 
-        //кнопка закрытия
         private void Exit(object sender, EventArgs e)
         {
             this.Close();
@@ -42,7 +41,6 @@ namespace Cursach
             closeButton.ForeColor = Color.White;
         }
 
-        //кнопка "свернуть окно"
         private void RollUp(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -58,7 +56,6 @@ namespace Cursach
             rollUpButton.ForeColor = Color.White;
         }
 
-        //Перемещение формы
         Point lastPoint;
         private void Panel3_MouseMove(object sender, MouseEventArgs e)
         {
@@ -74,7 +71,6 @@ namespace Cursach
             lastPoint = new Point(e.X, e.Y);
         }
 
-        //создание аккаунтов
         private void CreateAccButton_Click(object sender, EventArgs e)
         {
             string login = loginField.Text.Trim();
@@ -107,7 +103,6 @@ namespace Cursach
             ClearFields();
         }
 
-        //очищение полей
         private void ClearFields()
         {
             loginField.Clear();

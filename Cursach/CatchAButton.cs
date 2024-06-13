@@ -83,7 +83,7 @@ namespace Cursach
             int newY = rnd.Next(0, maxY);
 
             mainButton.Location = new Point(newX, newY);
-            mainButton.Enabled = true; // Включаем кнопку после перемещения
+            mainButton.Enabled = true;
         }
 
         private void TimerButt_Tick(object sender, EventArgs e)
@@ -103,19 +103,15 @@ namespace Cursach
 
             if (clickCount == 3)
             {
-                // Останавливаем кнопку
                 timerButt.Stop();
 
-                // Останавливает таймер игры
                 gameTimer.Stop();
 
-                // Выводим сообщение с результатом
                 MessageBox.Show("Ваш результат: " + time.ToString(@"mm\:ss"));
 
                 int timeInSeconds = (int)time.TotalSeconds;
                 UserManager.UpdateUserTime(login, timeInSeconds, currentLevel);
 
-                // Очищает таймер
                 time = TimeSpan.Zero;
                 timeLabel.Text = time.ToString(@"mm\:ss");
 
@@ -160,7 +156,7 @@ namespace Cursach
 
         private void EasyButton_Click(object sender, EventArgs e)
         {
-            SetButtonInterval(1f); //интервал 1 секунда
+            SetButtonInterval(1f);
             startButton.Enabled = true;
             currentLevel = "easy";
             diffLevelCheck.Text = "ВЫБРАН УРОВЕНЬ 1";
@@ -169,7 +165,7 @@ namespace Cursach
 
         private void MediumButton_Click(object sender, EventArgs e)
         {
-            SetButtonInterval(0.8f); //интервал 0.8 секунды
+            SetButtonInterval(0.8f);
             startButton.Enabled = true;
             currentLevel = "medium";
             diffLevelCheck.Text = "ВЫБРАН УРОВЕНЬ 2";
@@ -178,7 +174,7 @@ namespace Cursach
 
         private void HardButton_Click(object sender, EventArgs e)
         {
-            SetButtonInterval(0.6f); //интервал 0.6 секунды
+            SetButtonInterval(0.6f);
             startButton.Enabled = true;
             currentLevel = "hard";
             diffLevelCheck.Text = "ВЫБРАН УРОВЕНЬ 3";

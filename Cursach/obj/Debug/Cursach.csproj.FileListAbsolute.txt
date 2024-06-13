@@ -1,0 +1,33 @@
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.csproj.AssemblyReference.cache
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.LoginForm.resources
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.Properties.Resources.resources
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.csproj.GenerateResource.cache
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.csproj.CoreCompileInputs.cache
+C:\Users\CompayComp\source\repos\Cursach\Cursach\bin\Debug\Cursach.exe.config
+C:\Users\CompayComp\source\repos\Cursach\Cursach\bin\Debug\Cursach.exe
+C:\Users\CompayComp\source\repos\Cursach\Cursach\bin\Debug\Cursach.pdb
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.exe
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.pdb
+C:\Users\CompayComp\source\repos\Cursach\Cursach\obj\Debug\Cursach.CatchAButton.resources
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\bin\Debug\Cursach.exe.config
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\bin\Debug\Cursach.exe
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\bin\Debug\Cursach.pdb
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.csproj.AssemblyReference.cache
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.CatchAButton.resources
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.LoginForm.resources
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.Properties.Resources.resources
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.csproj.GenerateResource.cache
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.csproj.CoreCompileInputs.cache
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.exe
+C:\Users\CompayComp\source\repos\Cursach — копия\Cursach\obj\Debug\Cursach.pdb
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\bin\Debug\Cursach.exe.config
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\bin\Debug\Cursach.exe
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\bin\Debug\Cursach.pdb
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.csproj.AssemblyReference.cache
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.CatchAButton.resources
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.LoginForm.resources
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.Properties.Resources.resources
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.csproj.GenerateResource.cache
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.csproj.CoreCompileInputs.cache
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.exe
+C:\Users\CompayComp\source\repos\Cursovaya\Cursach\obj\Debug\Cursach.pdb

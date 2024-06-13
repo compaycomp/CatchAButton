@@ -1,0 +1,10 @@
+compaycomp,2
+comp,2
+comp,2
+comp,0
+comp,0
+comp,0
+compay,2
+compay,0
+com,0
+com,0

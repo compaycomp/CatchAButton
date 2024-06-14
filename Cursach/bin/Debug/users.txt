@@ -1,2 +1,2 @@
-ccc,cccccccc,2,3,4
-compaycomp,F1413324314F,3,2,4
+ccc,cccccccc,130,0,18
+compaycomp,F1413324314F,0,8,48

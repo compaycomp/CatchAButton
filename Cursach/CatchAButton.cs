@@ -14,6 +14,7 @@ namespace Cursach
         private int clickCount = 0;
         private string currentLevel = string.Empty;
         private string login;
+        private int gameDuration = 60;
 
         public CatchAButton(string login)
         {
@@ -99,33 +100,6 @@ namespace Cursach
         private void MainButton_Click(object sender, EventArgs e)
         {
             clickCount++;
-            mainButton.Enabled = false;
-
-            if (clickCount == 3)
-            {
-                timerButt.Stop();
-
-                gameTimer.Stop();
-
-                MessageBox.Show("Ваш результат: " + time.ToString(@"mm\:ss"));
-
-                int timeInSeconds = (int)time.TotalSeconds;
-                UserManager.UpdateUserTime(login, timeInSeconds, currentLevel);
-
-                time = TimeSpan.Zero;
-                timeLabel.Text = time.ToString(@"mm\:ss");
-
-                resetButt.Visible = false;
-                startButton.Enabled = true;
-                easyButton.Enabled = true;
-                mediumButton.Enabled = true;
-                hardButton.Enabled = true;
-                mainButton.Enabled = false;
-
-                clickCount = 0;
-
-                UpdateLeaderboard();
-            }
         }
 
         private void ButtonStart_Click(object sender, EventArgs e)
@@ -138,25 +112,40 @@ namespace Cursach
             hardButton.Enabled = false;
             startButton.Enabled = false;
             resetButt.Visible = true;
+
+            clickCount = 0;
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             time = time.Add(TimeSpan.FromSeconds(1));
+            timeLabel.Text = time.ToString(@"mm\:ss");
 
-            if (time.TotalMinutes >= 10)
+            if (time.TotalSeconds >= gameDuration)
             {
                 gameTimer.Stop();
-                MessageBox.Show("Время вышло!");
-                resetButt.Visible = false;
-            }
+                timerButt.Stop();
+                MessageBox.Show("Время вышло! Ваш результат: " + clickCount + " нажатий");
 
-            timeLabel.Text = time.ToString(@"mm\:ss");
+                UserManager.UpdateUserClicks(login, clickCount, currentLevel);
+
+                time = TimeSpan.Zero;
+                timeLabel.Text = time.ToString(@"mm\:ss");
+
+                resetButt.Visible = false;
+                startButton.Enabled = true;
+                easyButton.Enabled = true;
+                mediumButton.Enabled = true;
+                hardButton.Enabled = true;
+                mainButton.Enabled = false;
+
+                UpdateLeaderboard();
+            }
         }
 
         private void EasyButton_Click(object sender, EventArgs e)
         {
-            SetButtonInterval(1f);
+            SetButtonInterval(0.92f);
             startButton.Enabled = true;
             currentLevel = "easy";
             diffLevelCheck.Text = "ВЫБРАН УРОВЕНЬ 1";
@@ -165,7 +154,7 @@ namespace Cursach
 
         private void MediumButton_Click(object sender, EventArgs e)
         {
-            SetButtonInterval(0.8f);
+            SetButtonInterval(0.77f);
             startButton.Enabled = true;
             currentLevel = "medium";
             diffLevelCheck.Text = "ВЫБРАН УРОВЕНЬ 2";
@@ -174,7 +163,7 @@ namespace Cursach
 
         private void HardButton_Click(object sender, EventArgs e)
         {
-            SetButtonInterval(0.6f);
+            SetButtonInterval(0.66f);
             startButton.Enabled = true;
             currentLevel = "hard";
             diffLevelCheck.Text = "ВЫБРАН УРОВЕНЬ 3";
@@ -201,7 +190,7 @@ namespace Cursach
             var topPlayers = UserManager.GetTopPlayers(currentLevel);
             foreach (var player in topPlayers)
             {
-                leaderboardDataGridView.Rows.Add(player.Login, player.Time);
+                leaderboardDataGridView.Rows.Add(player.Login, player.Clicks);
             }
         }
 
